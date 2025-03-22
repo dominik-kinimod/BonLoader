@@ -1,0 +1,21 @@
+
+{
+	"name": "BonLoader",
+	"description": "Base Level Extension",
+	"version": "1.0",
+	"manifest_version": 3,
+	"action": {},
+	"permissions": ["activeTab", "scripting", "tabs", "downloads"],
+	"host_permissions": ["<all_urls>"],
+	"background": {
+		"service_worker": "background.js"
+	},
+	"content_scripts": [
+	{
+		"js": ["bonLoader.js"],
+		"matches": [
+			"<all_urls>"
+		]
+	}
+	]
+}
