@@ -53,6 +53,11 @@ function readArticles() {
         else if(i < 2 || element.id == "return_code_line_13" || element.id == "receipt_data_line_1"){
             temp.push(element.innerHTML);
         }
+        else if(element.id == "return_code_line_11"){
+            if(!element.innerHTML.includes("-")){
+                temp.push(element.innerHTML);
+            }
+        }
         i++;
     }
 
